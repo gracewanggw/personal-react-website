@@ -1,6 +1,5 @@
 import pic from "./PC_Group.jpg";
 import './App.css';
-import Tabs from "./Tabs.js";
 
 function App() {
   var name = null;
@@ -31,13 +30,7 @@ function App() {
 
 
   return (
-    <div className = "App">
-      <Tabs> 
-       <div label="Home" href="index.js"> 
-       </div> 
-       <div label="Say Hi">  
-       </div> 
-     </Tabs> 
+    <div className = "App"> 
       <head>
         <title>Personal Website</title>
       </head>
@@ -53,7 +46,7 @@ function App() {
             <div>
               {hiList}
             </div>
-            <input type="text" onChange={onChangeFunction}></input>
+            <input type="text" onChange={onChangeFunction} placeholder="Say hi back!"></input>
             <button onClick ={addNameFunction}>SUBMIT</button>
           </h1>
       </body>

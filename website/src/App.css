@@ -7,9 +7,14 @@
   width: 25%;
 }
 
+ul {
+  display: inline-block;
+}
+
 body{
   background-color:white;
   color: #FF6B6B;
+  list-style-position: inside;
 }
 
 h2{
