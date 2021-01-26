@@ -1,10 +1,10 @@
 import pic from "./PC_Group.jpg";
 import './App.css';
+import Tabs from "./Tabs.js";
 
 function App() {
   var name = null;
-  const header = "Hi there!";
-  const intro = "My name is Grace. Welcome to my website!";
+  const header = ["Hi there!", <br />,"My name is Grace. Welcome to my website!"];
   const about = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Currently, I am staying in Park City, Utah with a few friends."];
   const funFacts = <ul>
     <li>I LOVE food</li>
@@ -12,42 +12,50 @@ function App() {
     <li>I had to be sledded down by ski patrol the last time I went skiing</li>
   </ul>
   const contact = <ul>
-    <li class = "dark_blue_text"><a href="https://www.instagram.com/grace.wangggg/">Instagram</a> </li>
-    <li class = "dark_blue_text"><a href="https://www.linkedin.com/in/gracewang809/">LinkedIn</a></li>
-    <li class = "dark_blue_text"><a href="https://github.com/gracewanggw">GitHub</a></li>
+    <li><a href="https://www.instagram.com/grace.wangggg/">Instagram</a> </li>
+    <li><a href="https://www.linkedin.com/in/gracewang809/">LinkedIn</a></li>
+    <li><a href="https://github.com/gracewanggw">GitHub</a></li>
   </ul>
 
-  const addNameFunction= () =>{
-    namesList.push(name);
+  const onChangeFunction =  (Event) =>{
+    name = Event.target.value;
     console.log(name);
   }
 
-  const namesList = ["Grace"];
-  const namesMap = namesList.map((name) => {
-   return(
-     <p>{name} said hi!</p>
-   )
- });
+ var hiList = ["Grace said hi!"];
+
+  const addNameFunction= () =>{
+    window.alert("Thanks for saying hi!")
+    
+  }
+
 
   return (
     <div className = "App">
+      <Tabs> 
+       <div label="Home" href="index.js"> 
+       </div> 
+       <div label="Say Hi">  
+       </div> 
+     </Tabs> 
       <head>
         <title>Personal Website</title>
       </head>
-      <body class="background_color">
+      <body>
         <h1>{header}</h1>
-        <h2 class = "pink_text">{intro}</h2>
-        <p class="dark_blue_text">{about}</p>
+        <p>{about}</p>
         <img className = "photo" src={pic} />
-            <h2 class="pink_text">Here are a few fun facts about me</h2>
+            <h2>Here are a few fun facts about me</h2>
             <div> {funFacts}</div>
-            <h2 class = "pink_text">Contact: </h2>
+            <h2>Contact: </h2>
             <div>{contact}</div>
-          <div>
-            {namesMap}
-          </div>
-          <input type="text" value={name}></input>
-          <button onClick ={addNameFunction()}>SUBMIT</button>
+          <h1>
+            <div>
+              {hiList}
+            </div>
+            <input type="text" onChange={onChangeFunction}></input>
+            <button onClick ={addNameFunction}>SUBMIT</button>
+          </h1>
       </body>
     </div>
   );
