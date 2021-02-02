@@ -6,11 +6,17 @@
 }
 .App {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .photo{
+  margin-top: 25px;
   height: 25%;
   width: 25%;
+}
+
+p{
+  margin-top: 25px;
 }
 
 ul {
@@ -24,9 +30,9 @@ body{
 }
 
 h2{
+  margin-top: 25px;
   color: #4ECDC4;;
 }
-
 
 
 .header1 {
@@ -41,6 +47,7 @@ h2{
 }
 
 .App-link {
+  margin-top: 25px;
   color: #61dafb;
 }
 

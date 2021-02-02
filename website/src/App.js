@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar/Navbar";
 
 
 function App() {
-  var name = null;
   const header = ["Hi there!", <br />,"My name is Grace. Welcome to my website!"];
   const about = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Currently, I am staying in Park City, Utah with a few friends."];
   const funFacts = <ul>
@@ -17,19 +16,6 @@ function App() {
     <li><a href="https://www.linkedin.com/in/gracewang809/">LinkedIn</a></li>
     <li><a href="https://github.com/gracewanggw">GitHub</a></li>
   </ul>
-
-  const onChangeFunction =  (Event) =>{
-    name = Event.target.value;
-    console.log(name);
-  }
-
- var hiList = ["Grace said hi!"];
-
-  const addNameFunction= () =>{
-    window.alert("Thanks for saying hi!")
-    
-  }
-
 
   return (
     <div className = "App"> 
@@ -45,13 +31,6 @@ function App() {
             <div> {funFacts}</div>
             <h2>Contact: </h2>
             <div>{contact}</div>
-          <h1>
-            <div>
-              {hiList}
-            </div>
-            <input type="text" onChange={onChangeFunction} placeholder="Say hi back!"></input>
-            <button onClick ={addNameFunction}>SUBMIT</button>
-          </h1>
       </body>
     </div>
   );

@@ -11,6 +11,11 @@ const SIZES = [
     "btn--large"
 ]
 
+const alertUser= () =>{
+    window.alert("Thanks for saying hi!")
+    
+  }
+
 export const Button = ({
     children,
     type,
@@ -23,7 +28,7 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
 
     return (
-        <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onCLick}
+        <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={alertUser}
         type={type}>
             {children}
         </button>

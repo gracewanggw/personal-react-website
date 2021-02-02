@@ -1,10 +1,12 @@
 :root {
-    --primary: #3acbf7;
+    --primary: slategray;
 }
 
 .btn {
     padding: 8px 20px;
+    margin-right: 8px;
     border-radius: 4px;
+    width: 150px;
     outline: none;
     border: none;
     cursor: pointer;

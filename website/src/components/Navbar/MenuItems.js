@@ -9,9 +9,4 @@ export const MenuItems = [
         url: "#",
         cName: "nav-links"
     },
-    {
-        title: "Say Hi",
-        url: "#",
-        cName: "nav-links"
-    }
 ]
