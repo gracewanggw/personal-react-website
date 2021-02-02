@@ -1,5 +1,7 @@
 import pic from "./PC_Group.jpg";
 import './App.css';
+import Navbar from "./components/Navbar/Navbar";
+
 
 function App() {
   var name = null;
@@ -31,11 +33,12 @@ function App() {
 
   return (
     <div className = "App"> 
+      <Navbar />
       <head>
         <title>Personal Website</title>
       </head>
       <body>
-        <h1>{header}</h1>
+        <h1 className="header1">{header}</h1>
         <p>{about}</p>
         <img className = "photo" src={pic} />
             <h2>Here are a few fun facts about me</h2>
