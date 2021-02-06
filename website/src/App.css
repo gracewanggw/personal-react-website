@@ -17,6 +17,7 @@
 
 p{
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 ul {
@@ -66,6 +67,18 @@ h2{
   background-color: white;
   border: solid #ccc;
   border-width: 1px 1px 0 1px;
+}
+
+button{
+  padding: 8px 20px;
+  margin-right: 8px;
+  border-radius: 4px;
+  width: 150px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: slategray;
+  color: white ;
 }
 
 @keyframes App-logo-spin {
