@@ -1,6 +1,7 @@
 import pic from "./PC_Group.jpg";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
+import HelloCounter from "./components/HelloCounter.js";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <h2>Contact: </h2>
             <div>{contact}</div>
       </body>
+      <HelloCounter/>
     </div>
   );
 }
