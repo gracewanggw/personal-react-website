@@ -7,9 +7,8 @@ class Navbar extends Component{
    state = {clicked: false}
 
    handleClick = () =>{
-       this.setState({clicked: !this.state.clciked})
+       this.setState({clicked: !this.state.clicked})
    }
-   
    
    render(){
        return(
@@ -28,7 +27,6 @@ class Navbar extends Component{
                             </li>
                         )
                         })}
-                   
                </ul>
                <Button>Say Hi</Button>
            </nav>

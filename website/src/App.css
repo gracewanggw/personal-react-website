@@ -17,7 +17,6 @@
 
 p{
   margin-top: 25px;
-  margin-bottom: 25px;
 }
 
 ul {
@@ -72,6 +71,7 @@ h2{
 button{
   padding: 8px 20px;
   margin-right: 8px;
+  margin-top: 8px;
   border-radius: 4px;
   width: 150px;
   outline: none;
