@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-bottom: 2px;
   font-family: 'Montserrat', sans-serif;
 }
 .App {
