@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import HelloCounter from "./components/HelloCounter.js";
 import FunFacts from "./components/FunFacts.js";
+import Jeopardy from "./components/Jeopardy.js";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <h2>Contact: </h2>
             <div>{contact}</div>
       </body>
+      <Jeopardy/>
       <HelloCounter/>
     </div>
   );
