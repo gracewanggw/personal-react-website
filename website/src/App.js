@@ -1,12 +1,16 @@
 import pic from "./PC_Group.jpg";
 import './App.css';
+import Firebase from './firestore/index';
 import Navbar from "./components/Navbar/Navbar";
 import HelloCounter from "./components/HelloCounter.js";
 import FunFacts from "./components/FunFacts.js";
 import Jeopardy from "./components/Jeopardy.js";
+import ToDoBoard from "./components/ToDoBoard";
 
 
 function App() {
+  console.log(Firebase);
+  console.log(Firebase.db);
   const header = ["Hi there!", <br />,"My name is Grace. Welcome to my website!"];
   const about = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Currently, I am staying in Park City, Utah with a few friends."];
   // const funFacts = <ul>
@@ -39,6 +43,7 @@ function App() {
       </body>
       <Jeopardy/>
       <HelloCounter/>
+      <ToDoBoard/>
     </div>
   );
 }
