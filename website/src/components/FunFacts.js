@@ -4,8 +4,8 @@ class FunFacts extends Component{
     constructor(props){
         super(props);
         this.state = {idx: 0, end: 0};
-        this.funFacts = ["I LOVE food", "I'm currently trying to learn how to play the ukulele",
-        "I had to be sledded down by ski patrol the last time I went skiing"];
+        this.funFacts = ["I LOVE food", "Currently learning to play the ukulele",
+        "Had to be sledded down by ski patrol the last time I went skiing"];
         this.btnTxt = ["Next fact", "Repeat"];
     }
 
@@ -25,9 +25,11 @@ class FunFacts extends Component{
    render(){
     return(
         <div>
-            <h2>Here are a few fun facts about me</h2>
-            <div> {this.funFacts[this.state.idx]}</div>
-            <button onClick={this.nextFact}>{this.btnTxt[this.state.end]}</button>
+            <div className="heading"> 
+                <h1>Here are a few fun facts about me</h1>
+                <h3> {this.funFacts[this.state.idx]}</h3>
+                <button className="button1" onClick={this.nextFact}>{this.btnTxt[this.state.end]}</button>
+            </div>
         </div>
     )
 }

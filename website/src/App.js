@@ -1,37 +1,56 @@
-import pic from "./PC_Group.jpg";
+import pic from "./profile.jpg";
+import pepper from "./pepper.png";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import HelloCounter from "./components/HelloCounter.js";
 import FunFacts from "./components/FunFacts.js";
+import Classes from "./components/Classes.js";
 import Jeopardy from "./components/Jeopardy.js";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom"; 
 
 
 function App() {
   const header = ["Hi there!", <br />,"My name is Grace. Welcome to my website!"];
-  const about = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Currently, I am staying in Park City, Utah with a few friends."];
+  const about = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Currently, I am on-campus taking classes!"];
 
   const contact = <ul>
-    <li><a href="https://www.instagram.com/grace.wangggg/">Instagram</a> </li>
-    <li><a href="https://www.linkedin.com/in/gracewang809/">LinkedIn</a></li>
-    <li><a href="https://github.com/gracewanggw">GitHub</a></li>
+    <a href="https://www.instagram.com/grace.wangggg/">Instagram</a> 
+    <a href="https://www.linkedin.com/in/gracewang809/">LinkedIn</a>
+    <a href="https://github.com/gracewanggw">GitHub</a>
   </ul>
 
   return (
     <div className = "App"> 
-      <Navbar />
-      <head>
-        <title>Personal Website</title>
-      </head>
-      <body>
-        <h1 className="header1">{header}</h1>
-        <p>{about}</p>
-        <img className = "photo" src={pic} />
+          <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/Home" />
+          </Route>
+          <Route path="/Home"> 
+            <div className="heading">
+              <h1>{header}</h1>
+            </div>
+            <figure>
+                  <img src={pic} alt="Hi!" className="photo"/>
+            </figure>
+            <p>{about}</p>
+            <p> Explore this website to get to know me!</p>
+          </Route>
+          <Route path="/About">
             <FunFacts/>
+            <Classes/>
             <h2>Contact: </h2>
             <div>{contact}</div>
-      </body>
-      <Jeopardy/>
-      <HelloCounter/>
+          </Route>
+        </Switch>
+      </Router> 
     </div>
   );
 }

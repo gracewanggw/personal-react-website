@@ -26,7 +26,14 @@ ul {
 
 body{
   background-color:white;
-  color: #FF6B6B;
+  color: black;
+  list-style-position: inside;
+}
+
+a{
+  padding-left: 8px;
+  padding-right: 8px;
+  color: black;
   list-style-position: inside;
 }
 
@@ -35,16 +42,19 @@ h2{
   color: #4ECDC4;;
 }
 
+h1{
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
 
-.header1 {
+
+.heading {
   background-color: slategray;
-  min-height: 50vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -80,6 +90,19 @@ button{
   cursor: pointer;
   background-color: slategray;
   color: white ;
+}
+
+.button1{
+  padding: 8px 20px;
+  margin-right: 8px;
+  margin-top: 8px;
+  border-radius: 4px;
+  width: 150px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  color: slategray ;
 }
 
 @keyframes App-logo-spin {
