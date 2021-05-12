@@ -2,6 +2,7 @@ import pic from "./profile.jpg";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import FunPics from "./components/FunPics.js";
+import Projects from "./components/Projects.js";
 
 
 import {
@@ -16,11 +17,17 @@ function App() {
   const header = ["Hi there!", <br />,"Welcome to my website!"];
   const intro = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Explore this website to get to know me!"];
 
-  const about = <ul>
-    <li> Houston, TX</li>
-    <li> grace.wang.24@dartmouth.edu</li>
-    <li> Aspiring computer science major</li>
+  const basics = <ul>
+    <li> I'm from Houston, Texas</li>
+    <li> Studying Computer Science at Dartmouth College</li>
+    <li> </li>
   </ul>
+
+  const cs50 = <a href="https://www.cs.dartmouth.edu/~cs50/" target="_blank">CS 50</a>;
+  const math22 = <a href="https://math.dartmouth.edu/~m22s21/info.html" target="_blank">Math 22</a>;
+  const germ14 = <a href="http://dartmouth.smartcatalogiq.com/current/orc/Departments-Programs-Undergraduate/German-Studies/GERM-German-Studies/GERM-14" target="_blank">Into the Woods</a>;
+  const classes = [cs50, "    ", math22, "    ", germ14, <br />];
+
   const contact = <ul>
     <a href="https://www.instagram.com/grace.wangggg/">Instagram</a> 
     <a href="https://www.linkedin.com/in/gracewang809/">LinkedIn</a>
@@ -48,11 +55,20 @@ function App() {
             <div>{contact}</div>
           </Route>
           <Route path="/About">
-            <div>
+              <div className="heading">
+                  <h1> Basics: </h1>
+                  <p> {basics}</p>
+                  <h1> Classes: </h1>
+                  <p> {classes}</p>
+              </div>
+              <hr></hr>
               <FunPics/>
+              <hr></hr>
               <h2>Contact: </h2>
               <div>{contact}</div>
-            </div>
+          </Route>
+          <Route path="/Projects">
+            <Projects/>
           </Route>
         </Switch>
       </Router> 

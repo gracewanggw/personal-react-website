@@ -8,9 +8,18 @@ class FunPics extends Component{
         super(props);
         this.state = {idx: 0, end: 0};
         //const dartmouth = <figure><img src={pic} alt="Hi!" className="photo"/></figure>;
-        const dog = <figure><img src={pepper} alt="Hi!" className="photo"/></figure>;
-        const hiking = <figure><img src={hikePic} alt="Hi!" className="photo"/></figure>;
-        const tennis = <figure><img src={tennisPic} alt="Hi!" className="photo"/></figure>;
+        const dog = <figure>
+            <img src={pepper} alt="Hi!" className="photo"/>
+            <figcaption>This is my dog! Her name is Pepper and she can be a bit stubborn</figcaption>
+            </figure>;
+        const hiking = <figure>
+            <img src={hikePic} alt="Hi!" className="photo"/>
+            <figcaption>I love exploring the outdoor! This is from Velvet Rocks</figcaption>
+            </figure>;
+        const tennis = <figure>
+            <img src={tennisPic} alt="Hi!" className="photo"/>
+            <figcaption> I play tennis and am looking for hitting buddies! :)</figcaption>
+            </figure>;
         this.pics = [dog, hiking, tennis];
         this.btnTxt = ["Next", "Repeat"];
     }
@@ -31,10 +40,6 @@ class FunPics extends Component{
    render(){
     return(
         <div>
-            <div className="heading">
-                <h1> </h1>
-
-            </div>
             <div> 
                 <h2>Photos: </h2>
                 <h3> {this.pics[this.state.idx]}</h3>

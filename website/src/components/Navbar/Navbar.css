@@ -10,7 +10,6 @@
 .navbar-logo{
     color: ivory;
     justify-self: start;
-    margin-left: 20px;
     cursor: pointer;
 }
 
@@ -27,13 +26,11 @@
     text-align: center;
     width: 70vw;
     justify-content: end;
-    margin-right: 2rem;
 }
 
 .nav-links{
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
 }
 
 .nav-links:hover{

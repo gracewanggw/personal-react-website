@@ -16,6 +16,14 @@
   width: 300px;
 }
 
+.projectPhoto{
+  margin-top: 25px;
+  height: 500px;
+  width: 700px;
+  position: relative;
+}
+
+
 .profilephoto{
   margin-top: 25px;
   height: 400px;
@@ -25,10 +33,13 @@
 
 p{
   margin-top: 25px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
-ul {
+ul{
   display: inline-block;
+  text-align:left;
 }
 
 body{
@@ -50,6 +61,7 @@ h2{
 }
 
 h1{
+  margin-top: 8px;
   color: white;
   font-size: calc(10px + 2vmin);
 }
@@ -132,3 +144,35 @@ hr{
     transform: rotate(360deg);
   }
 }
+
+.img_wrap {
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  width: 750px;
+  position: relative;
+  border: 1px solid slategray;
+  border-radius: 10%;
+}
+
+.img_description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:black;
+  border-radius: 10%;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img_wrap:hover .img_description {
+  visibility: visible;
+  opacity: .75;
+}
+
