@@ -1,11 +1,8 @@
 import pic from "./profile.jpg";
-import pepper from "./pepper.png";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
-import HelloCounter from "./components/HelloCounter.js";
-import FunFacts from "./components/FunFacts.js";
-import Classes from "./components/Classes.js";
-import Jeopardy from "./components/Jeopardy.js";
+import FunPics from "./components/FunPics.js";
+
 
 import {
   BrowserRouter as Router,
@@ -16,9 +13,14 @@ import {
 
 
 function App() {
-  const header = ["Hi there!", <br />,"My name is Grace. Welcome to my website!"];
-  const about = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Currently, I am on-campus taking classes!"];
+  const header = ["Hi there!", <br />,"Welcome to my website!"];
+  const intro = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Explore this website to get to know me!"];
 
+  const about = <ul>
+    <li> Houston, TX</li>
+    <li> grace.wang.24@dartmouth.edu</li>
+    <li> Aspiring computer science major</li>
+  </ul>
   const contact = <ul>
     <a href="https://www.instagram.com/grace.wangggg/">Instagram</a> 
     <a href="https://www.linkedin.com/in/gracewang809/">LinkedIn</a>
@@ -38,16 +40,19 @@ function App() {
               <h1>{header}</h1>
             </div>
             <figure>
-                  <img src={pic} alt="Hi!" className="photo"/>
+                  <img src={pic} alt="Hi!" className="profilephoto"/>
             </figure>
-            <p>{about}</p>
-            <p> Explore this website to get to know me!</p>
+            <h2> Grace Wang </h2>
+            <p>{intro}</p>
+            <hr></hr>
+            <div>{contact}</div>
           </Route>
           <Route path="/About">
-            <FunFacts/>
-            <Classes/>
-            <h2>Contact: </h2>
-            <div>{contact}</div>
+            <div>
+              <FunPics/>
+              <h2>Contact: </h2>
+              <div>{contact}</div>
+            </div>
           </Route>
         </Switch>
       </Router> 
