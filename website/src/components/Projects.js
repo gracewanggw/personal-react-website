@@ -1,7 +1,8 @@
 import {Component} from "react"
-import remMe from "../rememberMe.png";
-import tripP from "../tripPacker.png";
-import wispApp from "../rideNow.png";
+import remMe from "../photos/rememberMe.png";
+import tripP from "../photos/tripPacker.png";
+import wispApp from "../photos/rideNow.png";
+import gitLogo from "../photos/githubLogo.png";
 
 class Projects extends Component{
     constructor(props){
@@ -11,8 +12,10 @@ class Projects extends Component{
             <img src={remMe} alt="Hi!" className="projectPhoto"/>
             <div className="img_description">
                 <h1> RememberMe</h1>
-                <p> RememberMe is an app that aims to help patients with Alzheimers remember their friends and family. </p>
+                <p> RememberMe is an app that aims to help patients with Alzheimer's remember their friends and family. </p>
                 <p> This app was made with Java in AndroidStudio </p>
+                <a href="https://www.cs.dartmouth.edu/~cs50/" target="_blank">
+                </a>
             </div>
             </div>;
         const tripPacker = <div class="img_wrap">

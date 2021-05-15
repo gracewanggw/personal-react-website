@@ -1,4 +1,4 @@
-import pic from "./profile.jpg";
+import pic from "./photos/profile.jpg";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import FunPics from "./components/FunPics.js";
@@ -15,12 +15,15 @@ import {
 
 function App() {
   const header = ["Hi there!", <br />,"Welcome to my website!"];
-  const intro = ["I am a Dartmouth '24 from Houston, Texas.",<br />, "Explore this website to get to know me!"];
+  const intro = ["Explore this website to get to know me!"];
 
   const basics = <ul>
-    <li> I'm from Houston, Texas</li>
-    <li> Studying Computer Science at Dartmouth College</li>
-    <li> </li>
+    <li>I am a Dartmouth '24 from Houston, Texas planning to study computer science and mathematics</li> 
+    <li> Currently, I am on-campus taking classes and working with the DALI Lab through the Women in Science Program</li>
+    <li> I am also involved with CoderDojo at Dartmouth and am a math tutor on the side</li>
+    <li> I love learning new things and sharing my knowledge as well</li>
+    <li> In my free time, I enjoy playing spikeball with friends, exploring the outdoors, and baking </li>
+    <li> I love jamming out to music when I work, some of my favorite artists are Taylor Swift, Jon Bellion, and Quinn XCII</li>
   </ul>
 
   const cs50 = <a href="https://www.cs.dartmouth.edu/~cs50/" target="_blank">CS 50</a>;
@@ -29,9 +32,9 @@ function App() {
   const classes = [cs50, "    ", math22, "    ", germ14, <br />];
 
   const contact = <ul>
-    <a href="https://www.instagram.com/grace.wangggg/">Instagram</a> 
-    <a href="https://www.linkedin.com/in/gracewang809/">LinkedIn</a>
-    <a href="https://github.com/gracewanggw">GitHub</a>
+    <a href="https://www.instagram.com/grace.wangggg/" target="_blank">Instagram</a> 
+    <a href="https://www.linkedin.com/in/gracewang809/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/gracewanggw" target="_blank">GitHub</a>
   </ul>
 
   return (
@@ -56,7 +59,7 @@ function App() {
           </Route>
           <Route path="/About">
               <div className="heading">
-                  <h1> Basics: </h1>
+                  <h1> About Me: </h1>
                   <p> {basics}</p>
                   <h1> Classes: </h1>
                   <p> {classes}</p>
@@ -68,7 +71,12 @@ function App() {
               <div>{contact}</div>
           </Route>
           <Route path="/Projects">
+            <div className="heading">
+              <h1> Skills: </h1>
+            </div>
             <Projects/>
+            <hr></hr>
+            
           </Route>
         </Switch>
       </Router> 

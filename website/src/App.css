@@ -14,6 +14,7 @@
   margin-top: 25px;
   height: 300px;
   width: 300px;
+  border-radius: 10%;
 }
 
 .projectPhoto{
@@ -175,4 +176,5 @@ hr{
   visibility: visible;
   opacity: .75;
 }
+
 

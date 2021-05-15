@@ -1,7 +1,7 @@
 import {Component} from "react"
-import pepper from "../pepper.png";
-import tennisPic from "../tennis.JPG";
-import hikePic from "../hiking.JPG";
+import pepper from "../photos/pepper.png";
+import tennisPic from "../photos/tennis.JPG";
+import hikePic from "../photos/hiking.JPG";
 
 class FunPics extends Component{
     constructor(props){
@@ -14,7 +14,7 @@ class FunPics extends Component{
             </figure>;
         const hiking = <figure>
             <img src={hikePic} alt="Hi!" className="photo"/>
-            <figcaption>I love exploring the outdoor! This is from Velvet Rocks</figcaption>
+            <figcaption>I love exploring the outdoors! This is at Velvet Rocks</figcaption>
             </figure>;
         const tennis = <figure>
             <img src={tennisPic} alt="Hi!" className="photo"/>
