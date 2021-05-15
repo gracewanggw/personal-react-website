@@ -3,6 +3,9 @@ import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import FunPics from "./components/FunPics.js";
 import Projects from "./components/Projects.js";
+import gitLogo from "./photos/githubLogo.png";
+import linkedIn from "./photos/linkedinLogo.png";
+import instaLogo from "./photos/instaLogo.png";
 
 
 import {
@@ -26,15 +29,20 @@ function App() {
     <li> I love jamming out to music when I work, some of my favorite artists are Taylor Swift, Jon Bellion, and Quinn XCII</li>
   </ul>
 
-  const cs50 = <a href="https://www.cs.dartmouth.edu/~cs50/" target="_blank">CS 50</a>;
-  const math22 = <a href="https://math.dartmouth.edu/~m22s21/info.html" target="_blank">Math 22</a>;
-  const germ14 = <a href="http://dartmouth.smartcatalogiq.com/current/orc/Departments-Programs-Undergraduate/German-Studies/GERM-German-Studies/GERM-14" target="_blank">Into the Woods</a>;
-  const classes = [cs50, "    ", math22, "    ", germ14, <br />];
+  /*const cs50 = <a href="https://www.cs.dartmouth.edu/~cs50/" target="_blank"  rel="noreferrer" >CS 50</a>;
+  const math22 = <a href="https://math.dartmouth.edu/~m22s21/info.html" target="_blank"  rel="noreferrer" >Math 22</a>;
+  const germ14 = <a href="http://dartmouth.smartcatalogiq.com/current/orc/Departments-Programs-Undergraduate/German-Studies/GERM-German-Studies/GERM-14" target="_blank"  rel="noreferrer" >Into the Woods</a>;
+  const classes = [cs50, "    ", math22, "    ", germ14, <br />]; */
 
   const contact = <ul>
-    <a href="https://www.instagram.com/grace.wangggg/" target="_blank">Instagram</a> 
-    <a href="https://www.linkedin.com/in/gracewang809/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/gracewanggw" target="_blank">GitHub</a>
+    <a href="https://www.instagram.com/grace.wangggg/" target="_blank"  rel="noreferrer" >
+      <img src={instaLogo} className="icons" alt="Instagram"></img></a> 
+    <a href="https://www.linkedin.com/in/gracewang809/" target="_blank"  rel="noreferrer" >
+      <img src={linkedIn} className="icons" alt="LinkedIn"></img>
+    </a>
+    <a href="https://github.com/gracewanggw" target="_blank"  rel="noreferrer" >
+      <img src={gitLogo} className="icons" alt="GitHub"></img>
+    </a>
   </ul>
 
   return (
@@ -59,24 +67,19 @@ function App() {
           </Route>
           <Route path="/About">
               <div className="heading">
+                <p></p>
                   <h1> About Me: </h1>
                   <p> {basics}</p>
-                  <h1> Classes: </h1>
-                  <p> {classes}</p>
+                  <p></p>
               </div>
-              <hr></hr>
               <FunPics/>
               <hr></hr>
-              <h2>Contact: </h2>
               <div>{contact}</div>
           </Route>
           <Route path="/Projects">
-            <div className="heading">
-              <h1> Skills: </h1>
-            </div>
             <Projects/>
             <hr></hr>
-            
+            <div>{contact}</div>
           </Route>
         </Switch>
       </Router> 

@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import {Button} from '../Button';
 import {MenuItems} from "./MenuItems"
 import "./Navbar.css"
 
@@ -13,10 +12,7 @@ class Navbar extends Component{
    render(){
        return(
            <nav className="NavbarItems">
-               <h1 className="navbar-logo">Grace Wang</h1>
-               <div className="menu-icon" onClick={this.handleClick}>
-                   <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-               </div>
+               <h1>Grace Wang</h1>
                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                    {MenuItems.map((item, index) => {
                         return(

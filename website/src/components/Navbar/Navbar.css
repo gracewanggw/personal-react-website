@@ -9,8 +9,8 @@
 
 .navbar-logo{
     color: ivory;
-    justify-self: start;
     cursor: pointer;
+    justify-content: left;
 }
 
 .fa-react{
